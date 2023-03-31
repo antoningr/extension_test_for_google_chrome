@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Extension de test</title>
+  <title>Ma première extension sans permissions</title>
   <script src="popup.js"></script>
 </head>
 <body>
-  <h1>Bienvenue dans mon extension de test !</h1>
-  <p>Cliquez sur le bouton ci-dessous pour afficher le titre de la page active.</p>
-  <button id="myButton">Afficher le titre de la page active</button>
+  <h1>Bienvenue dans ma première extension sans permissions !</h1>
+  <p>Cette extension ne nécessite pas de permissions pour fonctionner.</p>
+  <form>
+    <label for="value">Entrez une valeur :</label>
+    <input type="text" id="value" name="value">
+    <button type="button" id="save">Enregistrer</button>
+  </form>
+  <p id="message"></p>
 </body>
 </html>

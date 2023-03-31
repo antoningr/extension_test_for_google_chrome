@@ -1,11 +1,20 @@
+console.log("L'extension sans permissions fonctionne !");
+
 document.addEventListener('DOMContentLoaded', function() {
-    var button = document.getElementById('myButton');
-    button.addEventListener('click', function() {
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        var tab = tabs[0];
-        var title = tab.title;
-        alert(title);
-      });
+  var message = document.getElementById('message');
+  var saveButton = document.getElementById('save');
+  var valueInput = document.getElementById('value');
+
+  saveButton.addEventListener('click', function() {
+    chrome.storage.sync.set({ 'value': valueInput.value }, function() {
+      message.textContent = "La valeur " + valueInput.value + " a été enregistrée.";
     });
   });
-  
+
+  chrome.storage.sync.get(['value'], function(result) {
+    if (result.value) {
+      message.textContent = "La dernière valeur enregistrée était : " + result.value;
+      valueInput.value = result.value;
+    }
+  });
+});
