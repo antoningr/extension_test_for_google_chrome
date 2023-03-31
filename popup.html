@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ma première extension sans permissions</title>
-  <script src="popup.js"></script>
-</head>
-<body>
-  <h1>Bienvenue dans ma première extension sans permissions !</h1>
-  <p>Cette extension ne nécessite pas de permissions pour fonctionner.</p>
-  <form>
-    <label for="value">Entrez une valeur :</label>
-    <input type="text" id="value" name="value">
-    <button type="button" id="save">Enregistrer</button>
-  </form>
-  <p id="message"></p>
-</body>
+  <head>
+    <title>Extension de test</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        margin-top: 0;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 4px;
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Extension de test</h1>
+    <p>Cliquez sur le bouton pour effectuer une action :</p>
+    <button id="testButton" class="button">Tester une fonctionnalité</button>
+    <script src="popup.js"></script>
+  </body>
 </html>
