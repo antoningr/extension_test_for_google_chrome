@@ -1,4 +1,5 @@
-chrome.runtime.onInstalled.addListener(function() {
-    console.log("L'extension a été installée.");
+// Fonction d'initialisation
+chrome.runtime.onInstalled.addListener(() => {
+    console.log("Extension de test installée.");
   });
   
