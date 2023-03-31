@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Ma première extension de test",
+    "version": "1.0",
+    "description": "Ceci est une extension de test pour Google Chrome",
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
