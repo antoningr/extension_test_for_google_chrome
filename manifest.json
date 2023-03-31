@@ -3,11 +3,6 @@
     "name": "Extension de test",
     "version": "1.0",
     "description": "Extension de test pour Google Chrome",
-    "permissions": [
-      "tabs",
-      "storage",
-      "*://*/*"
-    ],
     "host_permissions": [
       "*://*/*"
     ],
@@ -25,7 +20,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["*://*/*"],
+        "matches": ["http://*/*", "https://*/*"],
         "js": ["content.js"],
         "run_at": "document_end"
       }

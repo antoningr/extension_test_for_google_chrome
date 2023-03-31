@@ -1,2 +1,1 @@
-// Fonction d'injection de code
-console.log("Extension de test injectée.");
+console.log("Le contenu du script a été chargé.");
