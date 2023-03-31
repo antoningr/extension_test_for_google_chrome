@@ -1,2 +1,1 @@
-// Code pour tester une fonctionnalité
-console.log('Test de fonctionnalité depuis content.js !');
+console.log("Le contenu du script a été chargé.");
